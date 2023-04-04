@@ -1,6 +1,6 @@
 # React Hooks Covered
 
-- This project is created to demonstrate useCases of React Hooks.
+- This project is created to demonstrate use cases of React Hooks.
 
 ## Available Scripts
 
