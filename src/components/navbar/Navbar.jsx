@@ -7,6 +7,7 @@ const Navbar = () => {
 	<navbar>
 		<NavLink className='navlink' to='/usestate'>UseState</NavLink>
 		<NavLink className='navlink' to='/useeffect'>UseEffect</NavLink>
+		<NavLink className='navlink' to='/usereducer'>UseReducer</NavLink>
 	</navbar>
   )
 }

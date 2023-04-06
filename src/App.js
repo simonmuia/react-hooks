@@ -4,6 +4,7 @@ import Navbar from './components/navbar/Navbar';
 import UseStatepage from './pages/UseStatepage';
 import UseEffectpage from './pages/UseEffectpage';
 import Footer from './components/footer/Footer';
+import UseReducerPage from './pages/UseReducerPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
        <Routes>
         <Route path='/usestate' element={<UseStatepage/>}/>
         <Route path='/useeffect' element={<UseEffectpage/>}/>
+        <Route path='/usereducer' element={<UseReducerPage/>}/>
        </Routes>
        <Footer/>
       </div>

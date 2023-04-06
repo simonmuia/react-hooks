@@ -7,6 +7,35 @@
   pointer-events: none;
 }
 
+/* form inputs */
+.wrapper{
+	display:flex;
+	flex-direction:column;
+	gap:2rem;
+	justify-content:center;
+	align-items:center;
+	margin-top:3rem;
+}
+
+.inputForm{
+	display:flex;
+	flex-direction:column;
+	gap:2rem;
+	align-items:center;
+	justify-content:center;
+	margin:2rem;
+	padding:3rem;
+	border-radius:10px;
+	border:1px solid gray;
+	width:max-content;
+	background-color:#e1e1e1;
+}
+
+.inputForm input{
+	padding:10px;
+	border:none;
+	border-radius:5px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

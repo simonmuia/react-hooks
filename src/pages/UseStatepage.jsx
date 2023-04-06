@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
-import './usestatepage.css';
 
 const UseStatepage = () => {
-  const [inputValue, setInputValue] = useState('Simon');
+  const [inputValue, setInputValue] = useState('');
+
+  const changeInputHandler = (event) =>{
+    const newValue = event.target.value;
+    setInputValue(newValue);
+  }
+
   return (
     <div className='wrapper'>
       <h2>UseState</h2>
 
       <div className='inputForm'>
-        <input type="text" placeholder="Enter something" />
-        {inputValue}
+        <input type="text" placeholder="Enter something"  onChange={changeInputHandler} />
+       {inputValue ? <div> You typed: {inputValue}</div> : <em>___</em>}
       </div>
     </div>
   );
