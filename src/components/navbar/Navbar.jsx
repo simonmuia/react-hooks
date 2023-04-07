@@ -33,6 +33,9 @@ const Navbar = () => {
           <NavLink className="nav-link" to="/usereducer">
             UseReducer
           </NavLink>
+          <NavLink className="nav-link" to="/useref">
+            UseRef
+          </NavLink>
         </div>
       </div>
     </nav>

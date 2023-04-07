@@ -6,6 +6,7 @@ import UseEffectpage from './pages/UseEffectpage';
 import Footer from './components/footer/Footer';
 import UseReducerPage from './pages/UseReducerPage';
 import Home from './pages/Home';
+import UseRefpage from './pages/UseRefpage';
 
 function App() {
  
@@ -19,6 +20,7 @@ function App() {
         <Route path='/usestate' element={<UseStatepage/>}/>
         <Route path='/useeffect' element={<UseEffectpage/>}/>
         <Route path='/usereducer' element={<UseReducerPage/>}/>
+        <Route path='/useref' element={<UseRefpage/>}/>
        </Routes>
        <Footer/>
       </div>
