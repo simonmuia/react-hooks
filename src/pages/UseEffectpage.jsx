@@ -24,24 +24,28 @@ const UseEffectpage = () => {
     setCurrentPage(newPage);
   };
 
-  
   return (
     <div className="wrapper">
       <h2>UseEffect</h2>
       <div className="section">
         <h5>List of Comments</h5>
-        <div className="comment">
+        <div className="comments">
           {comments.slice(startIndex, endIndex).map((comment) => (
-            <div key={comment.id}>
+            <div className="comment" key={comment.id}>
               <strong>{comment.name}</strong>
               <p>{comment.email}</p>
               <p>{comment.body}</p>
             </div>
           ))}
         </div>
-        <div className="pagination">
+        <div className="pagination justify-content-center">
           {/* previous button to toggle previous index*/}
           <button
+            className={
+              currentPage === 1
+                ? `page-item page-link disabled`
+                : 'page-item page-link'
+            }
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
           >
@@ -58,6 +62,7 @@ const UseEffectpage = () => {
             if (page === currentPage) {
               return (
                 <button
+                  className="page-item active page-link"
                   key={page}
                   onClick={() => handlePageChange(page)}
                   disabled
@@ -67,24 +72,39 @@ const UseEffectpage = () => {
               );
             }
             return (
-             
-                <button key={page} onClick={() => handlePageChange(page)}>
-                  {page}
-                </button>
+              <button
+                className="page-item page-link"
+                key={page}
+                onClick={() => handlePageChange(page)}
+              >
+                {page}
+              </button>
             );
           })}
           {/* add "..." chars to show extra pages after the third page */}
-          {currentPage > 4 ? <span>...</span> : ''}
+          {currentPage > 4 ? (
+            <span className="page-item page-link disabled">...</span>
+          ) : (
+            ''
+          )}
 
           {/* handle show current page */}
           {currentPage > 3 && currentPage < totalPages - 2 && (
-            <button onClick={() => handlePageChange(currentPage)} disabled>
+            <button
+              className="page-item page-link"
+              onClick={() => handlePageChange(currentPage)}
+              disabled
+            >
               {currentPage}
             </button>
           )}
 
           {/* add "..." if current page is greater than last fourth page or last page */}
-          {currentPage < totalPages - 3 ? <span>...</span> :''}
+          {currentPage < totalPages - 3 ? (
+            <span className="page-item page-link disabled">...</span>
+          ) : (
+            ''
+          )}
 
           {/* display the last 3 pages */}
           {[totalPages - 2, totalPages - 1, totalPages].map((page) => {
@@ -96,6 +116,7 @@ const UseEffectpage = () => {
             if (page === currentPage) {
               return (
                 <button
+                  className="page-item page-link active"
                   key={page}
                   onClick={() => handlePageChange(page)}
                   disabled
@@ -106,7 +127,12 @@ const UseEffectpage = () => {
             }
             // else render the button
             return (
-              <button key={page} onClick={() => handlePageChange(page)}>
+              <button
+                className="page-item page-link"
+                variant="contained"
+                key={page}
+                onClick={() => handlePageChange(page)}
+              >
                 {page}
               </button>
             );
@@ -114,6 +140,11 @@ const UseEffectpage = () => {
 
           {/* display next button to toggle next array index */}
           <button
+            className={
+              currentPage === totalPages
+                ? `page-item page-link disabled`
+                : 'page-item page-link'
+            }
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
           >

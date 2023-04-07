@@ -5,16 +5,16 @@ import UseStatepage from './pages/UseStatepage';
 import UseEffectpage from './pages/UseEffectpage';
 import Footer from './components/footer/Footer';
 import UseReducerPage from './pages/UseReducerPage';
+import Home from './pages/Home';
 
 function App() {
   return (
     <div className="App">
-      <h1>React Hooks Explained</h1>
-
       {/* create navigation menu */}
       <div className='navigation'>
         <Navbar/>
        <Routes>
+        <Route path='*' element={<Home/>}/>
         <Route path='/usestate' element={<UseStatepage/>}/>
         <Route path='/useeffect' element={<UseEffectpage/>}/>
         <Route path='/usereducer' element={<UseReducerPage/>}/>
