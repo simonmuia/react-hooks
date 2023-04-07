@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const UseEffectpage = () => {
-  return (
-	<div>
-    <h2>UseEffect</h2>
-  </div>
-  )
-}
+  const [data, setData] = useState('');
 
-export default UseEffectpage
+  useEffect(() => {
+    axios
+      .get('https://jsonplaceholder.typicode.com/comments')
+      .then((response) => {
+        setData(response.data[0].email);
+        console.log('API was called');
+      });
+  }, []);
+
+  return (
+    <div className="wrapper">
+      <h2>UseEffect</h2>
+      <div className="section">
+        <h4>Hello {data}</h4>
+      </div>
+    </div>
+  );
+};
+
+export default UseEffectpage;

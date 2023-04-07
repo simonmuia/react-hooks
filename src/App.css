@@ -36,6 +36,11 @@
 	border:none;
 	border-radius:5px;
 }
+.section{
+  min-height:60vh;
+  width:100%;
+  background-color:#dddddd;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

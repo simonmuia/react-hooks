@@ -10,6 +10,8 @@ const reducer = (state, action) =>{
       return {count: state.count + 1, showText: state.showText}
     case "toggleShowText":
       return {count: state.count, showText: !state.showText}
+    case "reset":
+      return {count:0, showText:true}
   
     default:
       return state;
@@ -38,6 +40,9 @@ const UseReducerPage = () => {
         >
           Click Here
         </button>
+        <button onClick={()=>{
+          dispatch({type:"reset"})
+        }}>Reset</button>
         {state.showText && <p>This is a text</p>}
 		</div>
        
