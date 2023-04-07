@@ -30,19 +30,24 @@ const UseReducerPage = () => {
       <h2>UseReducer</h2>
       <p>Uses to handle different states of a program</p>
 
-      <div className='inputForm'>
+      <div className='inputForm card'>
         <h2>{state.count}</h2>
+        <div className='buttons'>
         <button
+        className='btn btn-outline-success'
         onClick={()=>{
           dispatch({type:"INCREMENT"});
           dispatch({type:"toggleShowText"})
         }}        
         >
-          Click Here
+          Power with Reducer
         </button>
-        <button onClick={()=>{
+        <button
+        className='btn btn-outline-primary'
+        onClick={()=>{
           dispatch({type:"reset"})
         }}>Reset</button>
+        </div>
         {state.showText && <p>This is a text</p>}
 		</div>
        

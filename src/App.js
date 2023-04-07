@@ -8,6 +8,7 @@ import UseReducerPage from './pages/UseReducerPage';
 import Home from './pages/Home';
 
 function App() {
+ 
   return (
     <div className="App">
       {/* create navigation menu */}

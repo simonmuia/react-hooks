@@ -7,30 +7,46 @@
   pointer-events: none;
 }
 
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  } 
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  } 
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
 /* form inputs */
 .wrapper {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 3rem;
+  min-height:100vh;
+}
+.inputForm{
+  padding:3rem;
+
 }
 
-.inputForm {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem;
-  padding: 3rem;
-  border-radius: 10px;
-  border: 1px solid gray;
-  width: max-content;
-  background-color: #e1e1e1;
+.buttons{
+  display:flex;
+  gap:2rem;
+  margin:3rem;
 }
-
 
 .section {
   min-height: 60vh;

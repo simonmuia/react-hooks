@@ -31,10 +31,16 @@ const UseEffectpage = () => {
         <h5>List of Comments</h5>
         <div className="comments">
           {comments.slice(startIndex, endIndex).map((comment) => (
-            <div className="comment" key={comment.id}>
-              <strong>{comment.name}</strong>
-              <p>{comment.email}</p>
+            <div className="card" key={comment.id}>
+             <div className="card-header">
+              <strong className='card-title'>{comment.name}</strong>
+             </div>
+              
+             <div className="card-body">
               <p>{comment.body}</p>
+             </div>
+             <div className='blockquote-footer'> {comment.email}</div>
+              
             </div>
           ))}
         </div>
