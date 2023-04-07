@@ -4,11 +4,11 @@ import './navbar.css';
 
 const Navbar = () => {
   return (
-	<navbar>
+	<div className='navbar'>
 		<NavLink className='navlink' to='/usestate'>UseState</NavLink>
 		<NavLink className='navlink' to='/useeffect'>UseEffect</NavLink>
 		<NavLink className='navlink' to='/usereducer'>UseReducer</NavLink>
-	</navbar>
+	</div>
   )
 }
 

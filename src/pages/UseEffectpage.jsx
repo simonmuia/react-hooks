@@ -24,6 +24,7 @@ const UseEffectpage = () => {
     setCurrentPage(newPage);
   };
 
+  
   return (
     <div className="wrapper">
       <h2>UseEffect</h2>
@@ -38,19 +39,22 @@ const UseEffectpage = () => {
             </div>
           ))}
         </div>
-        <div className='pagination'>
-          {/* previous button */}
+        <div className="pagination">
+          {/* previous button to toggle previous index*/}
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
           >
             Previous
           </button>
-          
+
+          {/* display first 3 pages */}
           {[1, 2, 3].map((page) => {
             if (page > totalPages) {
               return null;
             }
+
+            // disable the button if its the current page
             if (page === currentPage) {
               return (
                 <button
@@ -63,22 +67,32 @@ const UseEffectpage = () => {
               );
             }
             return (
-              <button key={page} onClick={() => handlePageChange(page)}>
-                {page}
-              </button>
+             
+                <button key={page} onClick={() => handlePageChange(page)}>
+                  {page}
+                </button>
             );
           })}
-          {currentPage > 3 && <span>...</span>}
-          {currentPage > 2 && currentPage < totalPages && (
+          {/* add "..." chars to show extra pages after the third page */}
+          {currentPage > 4 ? <span>...</span> : ''}
+
+          {/* handle show current page */}
+          {currentPage > 3 && currentPage < totalPages - 2 && (
             <button onClick={() => handlePageChange(currentPage)} disabled>
               {currentPage}
             </button>
           )}
-          {currentPage < totalPages - 1 && <span>...</span>}
+
+          {/* add "..." if current page is greater than last fourth page or last page */}
+          {currentPage < totalPages - 3 ? <span>...</span> :''}
+
+          {/* display the last 3 pages */}
           {[totalPages - 2, totalPages - 1, totalPages].map((page) => {
+            // if the current page is less than 1 dont show
             if (page < 1) {
               return null;
             }
+            // if one of the last pages is a current page, disable the button
             if (page === currentPage) {
               return (
                 <button
@@ -90,12 +104,15 @@ const UseEffectpage = () => {
                 </button>
               );
             }
+            // else render the button
             return (
               <button key={page} onClick={() => handlePageChange(page)}>
                 {page}
               </button>
             );
           })}
+
+          {/* display next button to toggle next array index */}
           <button
             onClick={() => handlePageChange(currentPage + 1)}
             disabled={currentPage === totalPages}
