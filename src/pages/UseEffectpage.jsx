@@ -27,20 +27,24 @@ const UseEffectpage = () => {
   return (
     <div className="wrapper">
       <h2>UseEffect</h2>
+      <div className="card btn-wrapper">
+        <p>
+        The <mark></mark> Hook lets you perform side effects in function components:
+        </p>
+      </div>
       <div className="section">
         <h5>List of Comments</h5>
         <div className="comments">
           {comments.slice(startIndex, endIndex).map((comment) => (
             <div className="card" key={comment.id}>
-             <div className="card-header">
-              <strong className='card-title'>{comment.name}</strong>
-             </div>
-              
-             <div className="card-body">
-              <p>{comment.body}</p>
-             </div>
-             <div className='blockquote-footer'> {comment.email}</div>
-              
+              <div className="card-header">
+                <strong className="card-title">{comment.name}</strong>
+              </div>
+
+              <div className="card-body">
+                <p>{comment.body}</p>
+              </div>
+              <div className="blockquote-footer"> {comment.email}</div>
             </div>
           ))}
         </div>

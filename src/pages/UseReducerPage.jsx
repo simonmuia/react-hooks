@@ -28,7 +28,18 @@ const UseReducerPage = () => {
   return (
 	<div className='wrapper'>
       <h2>UseReducer</h2>
-      <p>Uses to handle different states of a program</p>
+      <div className="card btn-wrapper">
+        <p>
+          An alternative to <mark>useState</mark>. Accepts a reducer of type (state, action)
+          ={'>'} newState, and returns the current state paired with a dispatch
+          method. (If you’re familiar with Redux, you already know how this
+          works.) <mark>useReducer</mark> is usually preferable to useState when you have
+          complex state logic that involves multiple sub-values or when the next
+          state depends on the previous one. <mark>useReducer</mark>  also lets you optimize
+          performance for components that trigger deep updates because you can
+          pass dispatch down instead of callbacks.
+        </p>
+      </div>
 
       <div className='inputForm card'>
         <h2>{state.count}</h2>

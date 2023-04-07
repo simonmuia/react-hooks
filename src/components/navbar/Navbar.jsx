@@ -36,6 +36,9 @@ const Navbar = () => {
           <NavLink className="nav-link" to="/useref">
             UseRef
           </NavLink>
+          <NavLink className="nav-link" to="/uselayouteffect">
+            UseLayoutEffect
+          </NavLink>
         </div>
       </div>
     </nav>
