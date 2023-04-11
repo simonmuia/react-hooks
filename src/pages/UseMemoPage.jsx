@@ -25,7 +25,7 @@ const UseMemoPage = () => {
         longestName = currentName;
       }
     }
-    console.log("Computed");
+    console.log('Computed');
     return longestName;
   };
 
@@ -41,47 +41,62 @@ const UseMemoPage = () => {
           memoization as caching a value so that it does not need to be
           recalculated. The
           <mark>useMemo</mark> Hook only runs when one of its dependencies
-          update. </li>
-          <div className="container-fluid p-sm-3  bg-body-tertiary">
-            <li>
-              Consider the following example:
-              <br />
-              <br />
-            </li>
-            <li>
-              Consider an example below that fetches API data of blog comments
-              filtered to fetch the longest name among users
-            </li>
-            <div className="d-lg-flex flex-lg-row align-items-center mb-5 mt-5">
-              <img
-                src="images/usememo1.png"
-                width={500}
-                className="img-fluid"
-                alt="code1"
-              />
-              <img
-                src="images/usememo2.png"
-                width={500}
-                className="img-fluid"
-                alt="code1"
-              />
-            </div>
-            <li>
-              In the above code snippets, <code>UseMemo</code> hook is used to
-              compute <code>findLongestName</code> function once.
-            </li>
+          update.{' '}
+        </li>
+        <div className="container-fluid p-sm-3  bg-body-tertiary">
+          <li>
+            Consider the following example:
+            <br />
+            <br />
+          </li>
+          <div className="d-lg-flex flex-lg-row align-items-center mb-5 mt-5">
+            <img
+              src="images/usememo1.png"
+              width={500}
+              className="img-fluid"
+              alt="code1"
+            />
+            <img
+              src="images/usememo2.png"
+              width={500}
+              className="img-fluid"
+              alt="code1"
+            />
           </div>
-       
+          <li>
+            In the above code snippets, <code>UseMemo</code> hook is used to
+            compute <code>findLongestName</code> function once. The function{' '}
+            <code>findLongestName</code> is used to calculate the longest name
+            from the list of filtered names from API fetched
+          </li>
+          <li>
+            Once data is fetched by <code>UseEffect</code> hook, useMemo is
+            toggled without re-rendering, through memoization.
+            <br />
+            This is demonstrated by button below: Upon page load console logs
+            text <mark>computed</mark>
+            which is loaded from function <code>findLongestName</code>. After
+            page load, the <code>UseMemo</code> memoirs the function every time{' '}
+            <kbd>Toggle</kbd> button is clicked, hence it does not print the
+            alert on console.
+          </li>
+        </div>
       </div>
       <div className="align-items-center d-lg-flex alert alert-primary">
         <strong>Longest Name:</strong> {getLongestName}
         <div className="container p-2">
           {' '}
-          <button onClick={()=>setToggle(!toggle)} className="btn btn-success">Toggle</button>
+          <button
+            onClick={() => setToggle(!toggle)}
+            className="btn btn-success"
+          >
+            Toggle
+          </button>
         </div>
-       
-      </div> 
-      <div>{toggle && <p className='alert alert-info'>This is a toggled alert</p>}</div>
+      </div>
+      <div>
+        {toggle && <p className="alert alert-info">This is a toggled alert</p>}
+      </div>
     </div>
   );
 };
