@@ -14,14 +14,29 @@ const UseRefpage = () => {
   const submitData = () => {
     if (!inputRef.current.value) {
       inputRef.current.focus();
+      inputRef.current.value = 'Simon';
     }
     setName(inputRef.current.value);
-	
+    
   };
   return (
     <div className="wrapper">
-      <h1>UseRef Hook</h1>
-      <div className="card btn-wrapper">
+      <h1 className="text-success">UseRef Hook</h1>
+      <div className="card btn-wrapper m-size">
+        <li className="mb-2">
+          The <mark>useRef</mark> Hook allows you to persist values between
+          renders. It can be used to store a mutable value that does not cause a
+          re-render when updated. <br />
+          It can be used to access a DOM element directly.
+        </li>
+        <div className="card btn-wrapper border-0 shadow-sm bg-body-tertiary">
+          <li>
+            Consider the following <mark>example</mark>
+            containing a form that sets a name upon <kbd>Change Name</kbd> button click action.
+          </li>
+        </div>
+      </div>
+      <div className="card border-0 bg-body-tertiary btn-wrapper shadow-sm">
         <h2>{name}</h2>
 
         <input

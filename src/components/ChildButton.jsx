@@ -14,6 +14,7 @@ const ChildButton = forwardRef ((props, ref) => {
     <>
     <button
       className="btn btn-success"
+      onClick={()=>setToggle(!toggle)}
     >
       Button from a child
     </button>

@@ -10,9 +10,8 @@ const User = () => {
 	const {username} = useContext(AppContext);
 	
   return (
-    <div className="card btn-wrapper">
-      <h3>User:</h3>
-      <span>{username}</span>
+    <div className="card btn-wrapper bg-body-tertiary shadow border-0">
+      <div><strong>User:</strong> {username}</div>
     </div>
   );
 };

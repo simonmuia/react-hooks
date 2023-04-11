@@ -26,14 +26,21 @@ const UseEffectpage = () => {
 
   return (
     <div className="wrapper">
-      <h2>UseEffect</h2>
+      <h1 className="text-success">UseEffect Hook</h1>
       <div className="card btn-wrapper">
-        <p>
-        The <mark></mark> Hook lets you perform side effects in function components:
-        </p>
+        <li className='mb-2'>
+          The <mark>UseEffect</mark> Hook lets you perform side effects in function
+          components:
+        </li>
+        <div className="card btn-wrapper">
+          <li>
+            Consider the following <mark>example</mark> that fetches list of
+            comments from an API and refreshes the data on every page rendering
+          </li>
+        </div>
       </div>
-      <div className="section">
-        <h5>List of Comments</h5>
+      <div className="section mt-5 text-center">
+        <h2>List of Comments</h2>
         <div className="comments">
           {comments.slice(startIndex, endIndex).map((comment) => (
             <div className="card" key={comment.id}>

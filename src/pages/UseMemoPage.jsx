@@ -32,7 +32,7 @@ const UseMemoPage = () => {
       <h1 className="text-success">UseMemo Hook</h1>
 
       <div className="card btn-wrapper">
-        <p>
+        <li className='mb-2'>
           The React <mark>useMemo</mark> Hook returns a memoized value. Think of
           memoization as caching a value so that it does not need to be
           recalculated. The
@@ -46,7 +46,7 @@ const UseMemoPage = () => {
               filtered to fetch the longest name among users
             </em>
           </li>
-        </p>
+        </li>
       </div>
       <div className="card btn-wrapper">
         <h3>Longest Name:</h3>
