@@ -9,6 +9,8 @@ import Home from './pages/Home';
 import UseRefpage from './pages/UseRefpage';
 import UseLayoutEffectPage from './pages/UseLayoutEffectPage';
 import UseImperativeHandlePage from './pages/useImperativeHandlepage';
+import UseContextPage from './pages/useContextPage';
+import UseMemoPage from './pages/UseMemoPage';
 
 function App() {
  
@@ -25,6 +27,8 @@ function App() {
         <Route path='/useref' element={<UseRefpage/>}/>
         <Route path='/uselayouteffect' element={<UseLayoutEffectPage/>}/>
         <Route path='/useimperativehandle' element={<UseImperativeHandlePage/>}/>
+        <Route path='/usecontext' element={<UseContextPage/>}/>
+        <Route path='/usememo' element={<UseMemoPage/>}/>
        </Routes>
        <Footer/>
       </div>

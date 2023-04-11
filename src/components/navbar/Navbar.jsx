@@ -42,6 +42,12 @@ const Navbar = () => {
           <NavLink className="nav-link" to="/useimperativehandle">
             UseImperativeHandle
           </NavLink>
+          <NavLink className="nav-link" to="/usecontext">
+            UseContext
+          </NavLink>
+          <NavLink className="nav-link" to="/usememo">
+            UseMemo
+          </NavLink>
         </div>
       </div>
     </nav>
