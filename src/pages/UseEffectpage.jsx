@@ -27,12 +27,12 @@ const UseEffectpage = () => {
   return (
     <div className="wrapper">
       <h1 className="text-success">UseEffect Hook</h1>
-      <div className="card btn-wrapper">
-        <li className='mb-2'>
-          The <mark>UseEffect</mark> Hook lets you perform side effects in function
-          components:
+      <div className="container bg-body-tertiary p-5 p-sm">
+        <li className="mb-2">
+          The <mark>UseEffect</mark> Hook lets you perform side effects in
+          function components:
         </li>
-        <div className="card btn-wrapper">
+        <div className="container-fluid p-sm-3  bg-body-tertiary">
           <li>
             Consider the following <mark>example</mark> that fetches list of
             comments from an API and refreshes the data on every page rendering
@@ -55,7 +55,7 @@ const UseEffectpage = () => {
             </div>
           ))}
         </div>
-        <div className="pagination justify-content-center">
+        <div className="pagination justify-content-center flex-wrap">
           {/* previous button to toggle previous index*/}
           <button
             className={

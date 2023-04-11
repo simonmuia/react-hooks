@@ -18,7 +18,7 @@ const UseLayoutEffectPage = () => {
     <div className="wrapper">
       <h1 className="text-success">UseLayoutEffect Hook</h1>
 
-      <div className="card btn-wrapper">
+      <div className="container bg-body-tertiary p-5 p-sm">
         <li className="mb-2">
           The signature is identical to <mark>`useEffect`</mark>, but it fires
           synchronously after all DOM mutations. Use this to read layout from
@@ -26,16 +26,16 @@ const UseLayoutEffectPage = () => {
           <mark>`useLayoutEffect`</mark> will be flushed synchronously, before
           the browser has a chance to paint.
         </li>
-        <div className="card btn-wrapper border-0 shadow-sm bg-body-tertiary">
+        <div className="container-fluid p-sm-3  bg-body-tertiary">
           <li>
             Consider the following <mark>example</mark>:<br />
             <br />
             The following example loads a value of an input from UseLayoutEffect
             hook code:
           </li>
-          <div className="d-flex flex-row">
-            <img src="images/code1.png" alt="code1" />
-            <img src="images/code2.png" alt="code1" />
+          <div className="d-lg-flex mb-5 mt-5">
+            <img src="images/code1.png" className='img-fluid' alt="code1" />
+            <img src="images/code2.png" className='img-fluid'  alt="code1" />
           </div>
           <li>
             In the above code snippets, default value <mark>"Hello"</mark> is
@@ -46,7 +46,7 @@ const UseLayoutEffectPage = () => {
           </li>
         </div>
       </div>
-      <div className="card border-0 bg-body-tertiary btn-wrapper shadow-sm">
+      <div className="card border-0 bg-body-tertiary p-5 shadow-sm">
         <input ref={labelRef} value="Hello" className="form-control" />
       </div>
     </div>

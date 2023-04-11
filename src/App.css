@@ -41,8 +41,11 @@
   text-align:left;
 }
 .inputForm {
+  display:flex;
+  justify-content:center;
   padding: 3rem;
   min-height:320px;
+  align-content:center;
 }
 
 .btn-wrapper {
@@ -97,9 +100,29 @@
   border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+@media (max-width:850px) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+  .btn-wrapper{
+    display:block;
+    padding:2rem;
+  }
+  .card{
+    width:100%;
+
+  }
+  .p-sm{
+    padding:1rem;
+    margin:1rem;
+  }
+  .comments{
+    max-width:max-content;
+  }
+  .buttons{
+    margin:auto;
+    display:flex;
+    flex-direction:column;
   }
 }
 

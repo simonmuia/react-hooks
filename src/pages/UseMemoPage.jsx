@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 
 const UseMemoPage = () => {
   const [data, setData] = useState(null);
@@ -27,29 +27,44 @@ const UseMemoPage = () => {
     return longestName;
   };
 
+  const getLongestName = useMemo(() => findLongestName(data));
+
   return (
     <div className="wrapper">
       <h1 className="text-success">UseMemo Hook</h1>
 
-      <div className="card btn-wrapper">
-        <li className='mb-2'>
+      <div className="container bg-body-tertiary p-5 p-smr">
+        <li className="mb-2">
           The React <mark>useMemo</mark> Hook returns a memoized value. Think of
           memoization as caching a value so that it does not need to be
           recalculated. The
           <mark>useMemo</mark> Hook only runs when one of its dependencies
           update.
-          <br />
-          <hr />
-          <li>
-            <em>
-              Consider an example below that fetche API data of blog comments
-              filtered to fetch the longest name among users
-            </em>
-          </li>
+          <div className="container-fluid p-sm-3  bg-body-tertiary">
+            <li>
+              Consider the following example:<br />
+              <br />
+              
+            </li>
+            <li>Consider an example below that fetches API data of blog comments
+              filtered to fetch the longest name among users</li>
+            <div className="d-lg-flex mb-5 mt-5">
+              <img src="images/code1.png" className="img-fluid" alt="code1" />
+              <img src="images/code2.png" className="img-fluid" alt="code1" />
+            </div>
+            <li>
+              In the above code snippets, default value <mark>"Hello"</mark> is
+              loaded on the input. When page is loaded, the{' '}
+              <mark>useLayoutEffect</mark> loads first before any other hook
+              hence displaying <mark>"Hello"</mark> on console log before{' '}
+              <mark>"Simon"</mark> is rendered by <mark>UseEffect</mark>.
+            </li>
+          </div>
+          
         </li>
       </div>
-      <div className="card btn-wrapper">
-        <h3>Longest Name:</h3>
+      <div className="align-items-center d-lg-flex alert alert-primary">
+        <strong>Longest Name:</strong>{' '}
         {findLongestName(data)}
       </div>
     </div>

@@ -12,21 +12,21 @@ const UseImperativeHandlePage = () => {
     <div className="wrapper">
       <h1 className="text-success">UseImperativeHandle Hook</h1>
 
-      <div className="card btn-wrapper">
+      <div className="container bg-body-tertiary p-5 p-sm">
         <li className="mb-2">
           <mark>useImperativeHandle</mark> is a React Hook that lets you
           customize the handle exposed as a ref.
           <br />
           <strong>UseCase: Altering state of a child component.</strong>
         </li>
-        <div className="card btn-wrapper border-0 shadow-sm bg-body-tertiary">
+        <div className="container-fluid p-sm-3  bg-body-tertiary">
           <li>
             Consider the following <mark>example</mark>:<br />
             <br />
             The following example loads a value of an input from UseLayoutEffect
             hook code:
           </li>
-          <div className="d-flex flex-column">
+          <div className="d-flex flex-column mt-5 mb-5">
             Parent Page:
             <img src="images/code4.png" alt="code1" />
             <br />

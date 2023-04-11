@@ -13,14 +13,14 @@ const UseContextPage = () => {
       <div className="wrapper">
         <h1 className="text-success">UseContext Hook</h1>
 
-        <div className="card btn-wrapper">
+        <div className="container bg-body-tertiary p-5 p-sm">
           <li className="mb-2">
             <mark>UseContext</mark> is a React Hook that lets you read and
             subscribe to context from your component.
             <br /> <hr />
             <strong>Use Case: Replaces passing props between components</strong>
           </li>
-          <div className="card btn-wrapper border-0 shadow-sm bg-body-tertiary">
+          <div className="container-fluid p-sm-3  bg-body-tertiary ">
             <li>
               Consider the following <mark>example</mark>:<br />
               <br />
@@ -29,7 +29,7 @@ const UseContextPage = () => {
                 component using <code>useContext</code> hook.
               </li>
             </li>
-            <div className="d-flex flex-column">
+            <div className="d-flex flex-column mt-5 mb-5">
               Parent Page:
               <img src="images/parent-code5.png" alt="parent" />
               <br />

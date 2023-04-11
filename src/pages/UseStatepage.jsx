@@ -11,20 +11,20 @@ const UseStatepage = () => {
   return (
     <div className="wrapper">
       <h1 className="text-success">UseState Hook</h1>
-      <div className="card btn-wrapper">
+      <div className="container bg-body-tertiary p-5 p-sm">
         <li className='mb-2'>
           <mark>`useState`</mark> is a Hook that lets you add React state to
           function components.
           
         </li>
-        <div className="card border-0 shadow-sm btn-wrapper bg-body-tertiary">
+        <div className="container-fluid p-sm-3  bg-body-tertiary">
             <li>
               Consider the following <mark>example</mark> that Displays information as typed
               on a text input
             </li>
           </div>
       </div>
-      <div className="card md-w border-0 shadow-sm bg-body-tertiary p-5">
+      <div className="card border-0 bg-body-tertiary p-5 shadow-sm">
         <div className="col">
           <input
             type="text"
