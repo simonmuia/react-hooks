@@ -39,6 +39,9 @@ const Navbar = () => {
           <NavLink className="nav-link" to="/uselayouteffect">
             UseLayoutEffect
           </NavLink>
+          <NavLink className="nav-link" to="/useimperativehandle">
+            UseImperativeHandle
+          </NavLink>
         </div>
       </div>
     </nav>

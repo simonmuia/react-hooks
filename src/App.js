@@ -8,6 +8,7 @@ import UseReducerPage from './pages/UseReducerPage';
 import Home from './pages/Home';
 import UseRefpage from './pages/UseRefpage';
 import UseLayoutEffectPage from './pages/UseLayoutEffectPage';
+import UseImperativeHandlePage from './pages/useImperativeHandlepage';
 
 function App() {
  
@@ -23,6 +24,7 @@ function App() {
         <Route path='/usereducer' element={<UseReducerPage/>}/>
         <Route path='/useref' element={<UseRefpage/>}/>
         <Route path='/uselayouteffect' element={<UseLayoutEffectPage/>}/>
+        <Route path='/useimperativehandle' element={<UseImperativeHandlePage/>}/>
        </Routes>
        <Footer/>
       </div>
