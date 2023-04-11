@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 const UseMemoPage = () => {
   const [data, setData] = useState(null);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     axios
@@ -24,10 +25,11 @@ const UseMemoPage = () => {
         longestName = currentName;
       }
     }
+    console.log("Computed");
     return longestName;
   };
 
-  const getLongestName = useMemo(() => findLongestName(data));
+  const getLongestName = useMemo(() => findLongestName(data), [data]);
 
   return (
     <div className="wrapper">
@@ -39,34 +41,47 @@ const UseMemoPage = () => {
           memoization as caching a value so that it does not need to be
           recalculated. The
           <mark>useMemo</mark> Hook only runs when one of its dependencies
-          update.
+          update. </li>
           <div className="container-fluid p-sm-3  bg-body-tertiary">
             <li>
-              Consider the following example:<br />
+              Consider the following example:
               <br />
-              
+              <br />
             </li>
-            <li>Consider an example below that fetches API data of blog comments
-              filtered to fetch the longest name among users</li>
-            <div className="d-lg-flex mb-5 mt-5">
-              <img src="images/code1.png" className="img-fluid" alt="code1" />
-              <img src="images/code2.png" className="img-fluid" alt="code1" />
+            <li>
+              Consider an example below that fetches API data of blog comments
+              filtered to fetch the longest name among users
+            </li>
+            <div className="d-lg-flex flex-lg-row align-items-center mb-5 mt-5">
+              <img
+                src="images/usememo1.png"
+                width={500}
+                className="img-fluid"
+                alt="code1"
+              />
+              <img
+                src="images/usememo2.png"
+                width={500}
+                className="img-fluid"
+                alt="code1"
+              />
             </div>
             <li>
-              In the above code snippets, default value <mark>"Hello"</mark> is
-              loaded on the input. When page is loaded, the{' '}
-              <mark>useLayoutEffect</mark> loads first before any other hook
-              hence displaying <mark>"Hello"</mark> on console log before{' '}
-              <mark>"Simon"</mark> is rendered by <mark>UseEffect</mark>.
+              In the above code snippets, <code>UseMemo</code> hook is used to
+              compute <code>findLongestName</code> function once
             </li>
           </div>
-          
-        </li>
+       
       </div>
       <div className="align-items-center d-lg-flex alert alert-primary">
-        <strong>Longest Name:</strong>{' '}
-        {findLongestName(data)}
-      </div>
+        <strong>Longest Name:</strong> {getLongestName}
+        <div className="container p-2">
+          {' '}
+          <button onClick={()=>setToggle(!toggle)} className="btn btn-success">Toggle</button>
+        </div>
+       
+      </div> 
+      <div>{toggle && <p className='alert alert-info'>This is a toggled alert</p>}</div>
     </div>
   );
 };
