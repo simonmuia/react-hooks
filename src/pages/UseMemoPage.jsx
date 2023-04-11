@@ -68,7 +68,7 @@ const UseMemoPage = () => {
             </div>
             <li>
               In the above code snippets, <code>UseMemo</code> hook is used to
-              compute <code>findLongestName</code> function once
+              compute <code>findLongestName</code> function once.
             </li>
           </div>
        
