@@ -11,6 +11,7 @@ import UseLayoutEffectPage from './pages/UseLayoutEffectPage';
 import UseImperativeHandlePage from './pages/useImperativeHandlepage';
 import UseContextPage from './pages/useContextPage';
 import UseMemoPage from './pages/UseMemoPage';
+import UseCallbackPage from './pages/UseCallbackPage';
 
 function App() {
  
@@ -29,6 +30,7 @@ function App() {
         <Route path='/useimperativehandle' element={<UseImperativeHandlePage/>}/>
         <Route path='/usecontext' element={<UseContextPage/>}/>
         <Route path='/usememo' element={<UseMemoPage/>}/>
+        <Route path='/usecallback' element={<UseCallbackPage/>}/>
        </Routes>
        <Footer/>
       </div>

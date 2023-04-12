@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="container-fluid">
         <Link className='navbar-brand' to="/">ReactHooks&trade;</Link>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler border-0"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -18,11 +18,12 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
           onClick={()=>setToggle(!toggle)}
+        
         >
           <span className="navbar-toggler-icon"></span>
         </button>
       </div>
-      <div hidden={toggle} className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div  className={toggle ? `collapse navbar-collapse` : 'd-none'} id="navbarSupportedContent">
         <div className="navbar-nav">
           <NavLink className="nav-link" to="/usestate">
             UseState
@@ -47,6 +48,9 @@ const Navbar = () => {
           </NavLink>
           <NavLink className="nav-link" to="/usememo">
             UseMemo
+          </NavLink>
+          <NavLink className="nav-link" to="/usecallback">
+            UseCallback
           </NavLink>
         </div>
       </div>
